@@ -1,0 +1,70 @@
+.title {
+    margin-top: 80px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 宋体;
+}
+
+.wrapper {
+    min-height: 100vh;
+    padding-top: 200px;
+}
+
+.sun,
+.earth,
+.moon {
+    position: relative;
+    border-radius: 50%;
+    animation: run 4s linear infinite;
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+
+}
+
+.sun {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    margin: 0 auto;
+
+}
+
+.earth {
+    width: 40px;
+    height: 40px;
+    background-color: blue;
+    left: 220px;
+    display: block;
+}
+
+.moon {
+    width: 20px;
+    height: 20px;
+    background-color: gray;
+    left: 60px;
+    display: block;
+
+}
+
+@-webkit-keyframes run {
+
+    0% {
+        transform: rotate(0)
+    }
+
+    100% {
+        transform: rotate(-360deg)
+    }
+}
+
+@keyframes run {
+
+    0% {
+        transform: rotate(0)
+    }
+
+    100% {
+        transform: rotate(-360deg)
+    }
+}
