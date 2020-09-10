@@ -1,0 +1,146 @@
+.title {
+    margin-top: 80px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 宋体;
+}
+
+.b {
+    width: 180px;
+    height: 120px;
+    border: solid 20px #23ade5;
+    border-radius: 20px;
+    margin: 100px auto 0;
+    position: relative;
+}
+
+.left-line,
+.right-line {
+    width: 15px;
+    height: 60px;
+    position: absolute;
+    border-radius: 10px;
+    background-color: #23ade5;
+    top: -60px;
+}
+
+.left-line {
+    left: 50px;
+    transform: rotate(-45deg);
+
+}
+
+.right-line {
+    right: 50px;
+    transform: rotate(45deg);
+
+}
+
+.left-eye,
+.right-eye {
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    background-color: #23ade5;
+    top: 20px;
+
+}
+
+.left-eye {
+    left: 30px;
+    transform: rotate(75deg);
+    animation: lefteye 3s linear infinite;
+
+}
+
+.right-eye {
+    right: 30px;
+    transform: rotate(-75deg);
+    animation: righteye 3s linear infinite;
+
+}
+
+@keyframes lefteye {
+
+    25% {
+        transform: rotate(90deg)；
+    }
+
+    50% {
+        transform: rotate(115deg)
+    }
+
+    75% {
+        transform: rotate(90deg)
+    }
+
+    100% {
+        transform: rotate(75deg)
+    }
+}
+
+@keyframes righteye {
+
+    25% {
+        transform: rotate(-90deg)
+    }
+
+    50% {
+        transform: rotate(-115deg)
+    }
+
+    75% {
+        transform: rotate(-90deg)
+    }
+
+    100% {
+        transform: rotate(-75deg)
+    }
+}
+
+.left-mouth,
+.right-mouth {
+    position: absolute;
+    border-right: solid 10px #23ade5;
+    border-bottom: solid 10px #23ade5;
+
+}
+
+.left-mouth {
+    width: 15px;
+    height: 20px;
+    bottom: 19px;
+    left: 65px;
+    border-radius: 0 40% 50% 0;
+    transform: rotate(45deg);
+
+}
+
+.right-mouth {
+    width: 20px;
+    height: 15px;
+    bottom: 22px;
+    right: 62px;
+    border-radius: 0 0 50% 40%;
+    transform: rotate(45deg);
+
+}
+
+.left-dot,
+.right-dot {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    bottom: -35px;
+    border-radius: 50%;
+    background-color: #23ade5;
+}
+
+.left-dot {
+    left: 20px;
+}
+
+.right-dot {
+    right: 20px;
+}
