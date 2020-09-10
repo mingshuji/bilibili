@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <title>CSS制作一个可调速的太极图</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+    <p class="title">CSS制作一个可调速的太极图</p>
+    <div class="wrapper">
+        <input type="radio" id="s0" name="speed">
+        <input type="radio" id="s25" name="speed">
+        <input type="radio" id="s50" name="speed">
+        <input type="radio" id="s75" name="speed">
+        <input type="radio" id="s100" name="speed">
+        <div class="taiji">
+            <div class="yang">
+                <div class="eye"></div>
+            </div>
+            <div class="yin">
+                <div class="eye"></div>
+            </div>
+        </div>
+        <div class="switch">
+            <label for="s0">静止</label>
+            <label for="s25">慢</label>
+            <label for="s50">快</label>
+            <label for="s75">特快</label>
+            <label for="s100">极快</label>
+        </div>
+    </div>
+</body>
+
+</html>

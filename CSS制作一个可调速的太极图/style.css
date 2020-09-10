@@ -1,0 +1,139 @@
+ * {
+     margin: 0;
+     padding: 0;
+ }
+
+ body {
+     background-color: whitesmoke;
+     text-align: center;
+	      font-family: 宋体;
+
+ }
+
+ li {
+     list-style: none;
+ }
+
+ input {
+     display: none;
+ }
+
+ label {
+     background-color: white;
+     padding: 10px;
+ }
+
+ .title {
+     text-align: center;
+     font-size: 40px;
+     font-weight: bold;
+     margin: 50px 0;
+ }
+
+ .wrapper {
+     width: 400px;
+     height: 800px;
+     margin: 0 auto;
+
+ }
+
+ .taiji {
+     width: 400px;
+     height: 400px;
+     border-radius: 50%;
+     border: 1px grey solid;
+     overflow: hidden;
+     position: relative;
+     z-index: 1;
+ }
+
+ .taiji::before,
+ .taiji::after {
+     content: "";
+     width: 200px;
+     height: 400px;
+     display: block;
+     position: absolute;
+     z-index: 2;
+
+ }
+
+ .taiji::before,
+ .yang,
+ .yin .eye {
+     background-color: white;
+ }
+
+ .taiji::after {
+     top: 0;
+     left: 200px;
+ }
+
+ .taiji::after,
+ .yin,
+ .yang .eye {
+     background-color: black;
+ }
+
+ .yang,
+ .yin {
+     width: 200px;
+     height: 200px;
+     border-radius: 50%;
+     position: absolute;
+     top: 0;
+     left: 100px;
+     z-index: 3;
+ }
+
+ .yin {
+     top: 200px
+ }
+
+ .eye {
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;
+     position: absolute;
+     top: 75px;
+     left: 75px;
+ }
+
+ .switch {
+     margin-top: 40px;
+ }
+
+ #s0:checked~.taiji {
+     animation: none;
+
+ }
+
+ #s25:checked~.taiji {
+     animation: rotate 1s linear infinite;
+
+ }
+
+ #s50:checked~.taiji {
+     animation: rotate .5s linear infinite;
+
+ }
+
+ #s75:checked~.taiji {
+     animation: rotate .1s linear infinite;
+
+ }
+
+ #s100:checked~.taiji {
+     animation: rotate 1ms linear infinite;
+
+ }
+
+ @keyframes rotate {
+     0% {
+         transform: rotate(0deg);
+     }
+
+     100% {
+         transform: rotate(360deg);
+     }
+ }
