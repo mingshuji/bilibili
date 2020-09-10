@@ -1,0 +1,160 @@
+ * {
+     margin: 0;
+     padding: 0;
+ }
+
+ body {
+     background-color: whitesmoke;
+     text-align: center;
+     font-family: 宋体;
+
+ }
+
+ .title {
+     text-align: center;
+     font-size: 40px;
+     font-weight: bold;
+     margin: 50px 0;
+ }
+
+ .wrapper {
+     width: 800px;
+     height: 800px;
+     margin: 0 auto;
+ }
+
+ .blackhole {
+     width: 400px;
+     height: 400px;
+     margin: 0 auto;
+     position: relative;
+     animation: blackhole 5s linear 1 forwards;
+     border-radius: 50%;
+
+ }
+
+ .blackhole::before,
+ .blackhole::after {
+     content: "";
+     width: 80px;
+     height: 80px;
+     border-radius: 50%;
+     background-color: black;
+     position: absolute;
+     box-shadow: 0 0 20px 10px grey;
+
+ }
+
+ .blackhole::before {
+     top: 0;
+     left: 0;
+
+ }
+
+ .blackhole::after {
+     bottom: 0;
+     right: 0;
+
+ }
+
+ @keyframes blackhole {
+     0% {
+         top: 0;
+         transform: rotate(0deg);
+
+     }
+
+     20% {
+         top: 20px;
+         width: 400px;
+         height: 400px;
+         transform: rotate(90deg);
+
+
+     }
+
+     40% {
+         top: 40px;
+         width: 300px;
+         height: 300px;
+         transform: rotate(180deg);
+     }
+
+     60% {
+         top: 60px;
+         width: 200px;
+         height: 200px;
+         transform: rotate(360deg);
+     }
+
+     70% {
+         top: 80px;
+         width: 200px;
+         height: 200px;
+         transform: rotate(720deg);
+
+     }
+
+     80% {
+         top: 100px;
+         width: 100px;
+         height: 100px;
+         transform: rotate(1080deg);
+         box-shadow: none;
+
+     }
+
+     90% {
+         top: 120px;
+         width: 80px;
+         height: 80px;
+         transform: rotate(1800deg);
+         box-shadow: 0 0 20px 10px black;
+
+     }
+
+     100% {
+         top: 120px;
+         width: 80px;
+         height: 80px;
+         transform: rotate(360deg);
+         box-shadow: 0 0 20px 20px black;
+         transform: scale(1.2);
+     }
+ }
+
+ .wave {
+     position: absolute;
+     width: 80px;
+     height: 80px;
+     box-shadow: 0 0 1px 0 grey;
+     border-radius: 50%;
+     animation: wave 5s linear 4s 1;
+
+ }
+
+ @keyframes wave {
+     0% {
+         opacity: 1;
+     }
+
+     25% {
+         opacity: .8;
+         transform: scale(3);
+     }
+
+     50% {
+         opacity: .6;
+         transform: scale(6);
+     }
+
+     75% {
+         opacity: .4;
+         transform: scale(9);
+     }
+
+     100% {
+         opacity: 0;
+         transform: scale(12);
+     }
+ }
