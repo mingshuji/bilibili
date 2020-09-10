@@ -1,0 +1,139 @@
+ .title {
+     text-align: center;
+     font-size: 40px;
+     font-weight: bold;
+     font-family: 宋体;
+
+ }
+
+ .warpper {
+     width: 400px;
+     height: 400px;
+     margin: 0 auto;
+     position: relative;
+ }
+
+ .lift {
+     width: 300px;
+     height: 400px;
+     margin-top: 50px;
+     overflow: hidden;
+     float: left;
+     box-shadow: 0 -20px 0 20px grey;
+     border-bottom: solid 2px grey;
+     background-color: snow;
+
+ }
+
+ input {
+     display: none;
+
+ }
+
+ .left-door,
+ .right-door {
+     width: 149px;
+     height: 400px;
+     background-color: whitesmoke;
+     transition: all 2s ease-out;
+ }
+
+ .left-door {
+     float: left;
+     border-right: solid 1px grey;
+
+ }
+
+ .right-door {
+     float: right;
+     border-left: solid 1px grey;
+
+ }
+
+ .switch {
+     width: 30px;
+     height: 70px;
+     background-color: whitesmoke;
+     position: absolute;
+     bottom: 80px;
+     right: 40px;
+     padding-top: 10px;
+     box-shadow: 0 0 5px 0 grey;
+ }
+
+ .screen {
+     width: 20px;
+     height: 30px;
+     background-color: black;
+     margin: 0 auto;
+     padding-top: 6px;
+
+ }
+
+ .switch-label {
+     width: 10px;
+     height: 10px;
+     border-radius: 50%;
+     display: block;
+     background-color: whitesmoke;
+     margin: 10px auto;
+     border: solid 2px grey;
+     color: red;
+     font-size: 8px;
+     line-height: 10px;
+     text-align: center;
+     cursor: pointer;
+
+ }
+
+ .switch-label::before {
+     content: "↑";
+
+ }
+
+ .arrow {
+     margin: 0 auto;
+     width: 0;
+     height: 0;
+     border-bottom: 10px solid white;
+     border-right: 6px solid transparent;
+     border-left: 6px solid transparent;
+     display: none;
+
+ }
+
+ .num {
+     position: absolute;
+     top: 30px;
+     left: 15px;
+ }
+
+ .num::before,
+ .num::after {
+     content: "";
+     display: block;
+     width: 2px;
+     height: 5px;
+     background-color: white;
+     border-radius: 1px;
+
+ }
+
+ input:checked~.lift .left-door {
+     transform: translateX(-150px);
+
+
+ }
+
+ input:checked~.lift .right-door {
+     transform: translateX(150px);
+ }
+
+ input:checked~.switch .arrow {
+     display: block;
+ }
+
+ input:checked~.switch .switch-label {
+     border: solid 2px orange;
+     box-shadow: 0 0 5px 0 orange;
+ }
