@@ -1,0 +1,71 @@
+.title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 宋体;
+
+}
+
+.wrapper {
+    background-color: grey;
+    padding: 100px 0;
+    opacity: 1;
+
+}
+
+.lamp {
+    width: 400px;
+    height: 200px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.switch {
+    width: 40px;
+    height: 40px;
+    background-color: whitesmoke;
+    margin: 10px 0 0 1000px;
+    position: relative;
+}
+
+.switch label {
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    background-color: white;
+    margin: 2.5px 0 0 2.5px;
+    box-shadow: 0 1px 2px 0 gray;
+}
+
+.line {
+    width: 20px;
+    height: 4px;
+    background-color: greenyellow;
+    box-shadow: 0 0 10px 2px greenyellow;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+}
+
+input {
+    opacity: 0;
+    cursor: pointer;
+    position: absolute;
+    left: -50px;
+}
+
+input:checked+.wrapper {
+    opacity: .3;
+}
+
+input:checked+.wrapper .lamp {
+    box-shadow: 0 0 100px 20px white;
+
+}
+
+input:checked~.switch .switch-label {
+    box-shadow: 0 -1px 2px 0 gray;
+
+}
